@@ -1,1 +1,1 @@
-# BarqPro
+# e-diamond

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{%load static %}
+
+{% block title %}Verify Account{% endblock title %}
+
+{% block content %}
+
+    {% if valid %}
+        <div class="card-header text-secondary">
+            <h3 class="fw-bolder" >Welcome to FatooraPro!</h3>
+        </div>
+        <div class="card-body">
+            <i class="icon fas fa-check-circle pb-2 text-success"></i>
+            <h5 class="card-title">Your Account is Activated</h5>
+            <p class="card-text">Thank you for activating your account. You are now a part of our community.</p>
+        </div>
+        <div class="card-footer text-muted">
+            <img src="{% static 'images/logos/light/1.jpeg' %}" width="250" height="90" />
+        </div> 
+    {% else %}
+        <div class="card-header text-secondary">
+            <h3>Error</h3> 
+        </div>
+        <div class="card-body ">
+            <i class="icon fas fa-exclamation-triangle text-danger pb-2"></i>
+            <h5 class="card-title">Invalid URL</h5>
+            <p class="card-text">The URL you provided is invalid. Please check the link because maybe is expired.</p>
+        </div>
+    {% endif %}
+
+{% endblock content %}
